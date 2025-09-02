@@ -45,9 +45,9 @@ if(isNaN(valg)) {
 //-------------------------------------------------------------------------------------------------
 
 for (let rad = 1; rad <= 10; rad++) {           
-    let row = "";
+    let row = '';
     for (let kollone = 1; kollone <= 10; kollone++) {    
-        row += (rad * kollone).toString()
+        row += (rad * kollone).toString().padStart(5, ' ')
     }
     console.log(row);
 }
