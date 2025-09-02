@@ -27,24 +27,18 @@ while (tries < 3) {
 console.log (' ')
 //-------------------------------------------------------------------------------------------------
 
-let valg = prompt('Venligst velg et oddetall eller et partall', 1)
-let tall = 0
+let valg = prompt('Skriv et oddetall eller partall')
+valg = Number(valg)
+let i = 0
 
-switch (valg % 2) {
-    case 0:
-        tall = 2
-        while (tall < 101) {
-            console.log(tall)
-            tall + 2
+if(isNaN(valg)) {
+    console.log('Invalid')
+} else if (valg % 2 == 0) {
+    for (i = 2; i <= 100; i += 2) {
+        console.log(i)
         }
-        break;
-    case 1:
-        tall = 1
-        while (tall < 100) {
-            console.log(tall)
-            tall + 2
+    } else {
+        for (i = 1; i <= 99; i += 2) {
+            console.log(i)
         }
-        break;
-    default:
-        console.log('Det der er ikke et tall')
-}
+    }
