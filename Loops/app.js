@@ -32,7 +32,7 @@ valg = Number(valg)
 let i = 0
 
 if(isNaN(valg)) {
-    console.log('Invalid')
+    console.log('Det der er ikke et tall')
 } else if (valg % 2 == 0) {
     for (i = 2; i <= 100; i += 2) {
         console.log(i)
@@ -42,3 +42,12 @@ if(isNaN(valg)) {
             console.log(i)
         }
     }
+//-------------------------------------------------------------------------------------------------
+
+for (let rad = 1; rad <= 10; rad++) {           
+    let row = "";
+    for (let kollone = 1; kollone <= 10; kollone++) {    
+        row += (rad * kollone).toString()
+    }
+    console.log(row);
+}
